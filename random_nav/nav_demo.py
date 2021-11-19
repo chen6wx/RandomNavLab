@@ -135,6 +135,7 @@ def main():
     args = parser.parse_args()
 
     rclpy.init()
+    #Do we need to make a node? How does rclpy know to stop? 
     node = NavNode(args.x, args.y, args.theta, args.timeout)
     rclpy.spin_until_future_complete(node, node)
 
